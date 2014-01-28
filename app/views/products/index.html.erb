@@ -1,12 +1,20 @@
 <h1>Products</h1>
-<ul>
-<% @products.each do |p| %>
-	<li>
-		<div>
-			<%= p[:description] %>
-			<span><%= p[:price] %></span>
-			<a href="/products/<%= p[:id] %>">Add to basket</a>
-		</div>
-	</li>
-<% end %>
-</ul>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Description</th>
+			<th>Price</th>
+			<th>Quantity</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+	<% @products.each do |p| %>
+		<tr>
+			<td><%= p[:description] %></td>
+			<td><%= p[:price] %></td>
+			<td><%= p[:quantity] %></td>
+			<td><a class="btn btn-default" href="/products/<%= p[:id] %>">Add to basket</a></td>		
+		</tr>
+	<% end %>
+</table>
