@@ -1,0 +1,12 @@
+<h1>Products</h1>
+<ul>
+<% @products.each do |p| %>
+	<li>
+		<div>
+			<%= p[:description] %>
+			<span><%= p[:price] %></span>
+			<a href="/products/<%= p[:id] %>">Add to basket</a>
+		</div>
+	</li>
+<% end %>
+</ul>

@@ -1,0 +1,1 @@
+$database = Sequel.connect('sqlite://db/revents.sqlite')
