@@ -1,0 +1,12 @@
+export PATH ; PATH="/Users/ema/.rvm/gems/ruby-2.0.0-p247@revents/bin:/Users/ema/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/ema/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/ema/.rvm/bin:$PATH"
+export rvm_env_string ; rvm_env_string='ruby-2.0.0-p247@revents'
+export rvm_path ; rvm_path='/Users/ema/.rvm'
+export rvm_ruby_string ; rvm_ruby_string='ruby-2.0.0-p247'
+export rvm_gemset_name ; rvm_gemset_name='revents'
+export RUBY_VERSION ; RUBY_VERSION='ruby-2.0.0-p247'
+export GEM_HOME ; GEM_HOME='/Users/ema/.rvm/gems/ruby-2.0.0-p247@revents'
+export GEM_PATH ; GEM_PATH='/Users/ema/.rvm/gems/ruby-2.0.0-p247@revents:/Users/ema/.rvm/gems/ruby-2.0.0-p247@global'
+export MY_RUBY_HOME ; MY_RUBY_HOME='/Users/ema/.rvm/rubies/ruby-2.0.0-p247'
+export IRBRC ; IRBRC='/Users/ema/.rvm/rubies/ruby-2.0.0-p247/.irbrc'
+unset MAGLEV_HOME
+unset RBXOPT
