@@ -15,9 +15,9 @@ module AggregateRootHelper
     @@subscribers[event] << {klass: self, method: method}
   end
 
-  def raise_event(event, *args)    
+  def raise_event(event, args)    
     uncommited_events << {name: event, args: args}
-    send "on_#{event}", *args
+    send "on_#{event}", args
   end
 
   # TODO: error checking

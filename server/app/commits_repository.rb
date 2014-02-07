@@ -9,8 +9,6 @@ class CommitsRepository
   end
 
   def store(aggregate_id, event)
-    p '####'
-    p event
     event["timestamp"] = get_timestamp
     event["aggregate_id"] = aggregate_id
     @db["commits"].insert(event)

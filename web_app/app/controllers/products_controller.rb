@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
 	end
 
 	def add_to_basket
-		send_command AddToBasketCommand.new({basket_id:1, article_id:params[:id]})
+		send_command AddToBasketCommand.new({"basket_id" => 1, "article_id" => params[:id]})
 		redirect_to products_url
 	end
 end

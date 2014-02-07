@@ -10,13 +10,23 @@ db = mongo_client.db('revents')
 
 db["commits"].drop
 
-doc = {"aggregate_id" => 1, "timestamp" => timestamp, "name" => "item_added", "args" => ["001"]}
+doc = {"aggregate_id" => 1, "timestamp" => timestamp, "name" => "item_added", "args" => {:item_code => '001', :item_price => 10}}
 db["commits"].insert(doc)
-doc = {"aggregate_id" => 1, "timestamp" => timestamp, "name" => "item_added", "args" => ["002"]}
+doc = {"aggregate_id" => 1, "timestamp" => timestamp, "name" => "item_added", "args" => {:item_code => '002', :item_price => 20}}
 db["commits"].insert(doc)
-doc = {"aggregate_id" => 1, "timestamp" => timestamp, "name" => "item_removed", "args" => ["001"]}
+doc = {"aggregate_id" => 1, "timestamp" => timestamp, "name" => "item_removed", "args" => {:item_code => '001', :item_price => 10}}
 db["commits"].insert(doc)
-doc = {"aggregate_id" => 1, "timestamp" => timestamp, "name" => "item_added", "args" => ["003"]}
+doc = {"aggregate_id" => 1, "timestamp" => timestamp, "name" => "item_added", "args" => {:item_code => '003', :item_price => 15}}
 db["commits"].insert(doc)
+
+
+# doc = {"aggregate_id" => 1, "timestamp" => timestamp, "name" => "item_added", "args" => {"item_code" => '001', "item_price" => 10}}
+# db["commits"].insert(doc)
+# doc = {"aggregate_id" => 1, "timestamp" => timestamp, "name" => "item_added", "args" => {"item_code" => '002', "item_price" => 20}}
+# db["commits"].insert(doc)
+# doc = {"aggregate_id" => 1, "timestamp" => timestamp, "name" => "item_removed", "args" => {"item_code" => '001', "item_price" => 10}}
+# db["commits"].insert(doc)
+# doc = {"aggregate_id" => 1, "timestamp" => timestamp, "name" => "item_added", "args" => {"item_code" => '003', "item_price" => 15}}
+# db["commits"].insert(doc)
 
 

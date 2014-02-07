@@ -1112,3 +1112,468 @@ Started GET "/products" for 127.0.0.1 at 2014-02-07 21:39:09 +0100
 Processing by ProductsController#index as HTML
   Rendered products/index.html.erb within layouts/application (0.6ms)
 Completed 200 OK in 11ms (Views: 10.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-07 20:58:59 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/ema/.rvm/gems/ruby-2.0.0-p247@revents/gems/railties-4.0.2/lib/rails/templates/rails/welcome/index.html.erb (1.2ms)
+Completed 200 OK in 22ms (Views: 6.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-02-07 20:59:03 +0100
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 3117ms (Views: 3116.0ms)
+
+
+Started GET "/assets/custom_bootstrap.css?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-02-07 20:59:06 +0100
+
+
+Started GET "/products/2" for 127.0.0.1 at 2014-02-07 20:59:09 +0100
+Processing by ProductsController#add_to_basket as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 1ms
+
+ArgumentError (wrong number of arguments (1 for 2)):
+  app/commands/add_to_basket_command.rb:8:in `initialize'
+  app/controllers/products_controller.rb:9:in `new'
+  app/controllers/products_controller.rb:9:in `add_to_basket'
+
+
+  Rendered /home/ema/.rvm/gems/ruby-2.0.0-p247@revents/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/ema/.rvm/gems/ruby-2.0.0-p247@revents/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/ema/.rvm/gems/ruby-2.0.0-p247@revents/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/ema/.rvm/gems/ruby-2.0.0-p247@revents/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (38.2ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2014-02-07 20:59:09 +0100
+Processing by ProductsController#add_to_basket as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 1ms
+
+ArgumentError (wrong number of arguments (1 for 2)):
+  app/commands/add_to_basket_command.rb:8:in `initialize'
+  app/controllers/products_controller.rb:9:in `new'
+  app/controllers/products_controller.rb:9:in `add_to_basket'
+
+
+  Rendered /home/ema/.rvm/gems/ruby-2.0.0-p247@revents/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/ema/.rvm/gems/ruby-2.0.0-p247@revents/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/ema/.rvm/gems/ruby-2.0.0-p247@revents/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/ema/.rvm/gems/ruby-2.0.0-p247@revents/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 9.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/custom_bootstrap.css?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:19 +0100
+
+
+Started GET "/products" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 7.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/custom_bootstrap.css?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-07 21:00:20 +0100
+
+
+Started GET "/products/2" for 127.0.0.1 at 2014-02-07 21:00:22 +0100
+Processing by ProductsController#add_to_basket as HTML
+  Parameters: {"id"=>"2"}
+Redirected to http://localhost:3000/products
+Completed 302 Found in 13ms
+
+
+Started GET "/products" for 127.0.0.1 at 2014-02-07 21:00:22 +0100
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 18ms (Views: 17.6ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2014-02-07 21:01:20 +0100
+Processing by ProductsController#add_to_basket as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://localhost:3000/products
+Completed 302 Found in 12ms
+
+
+Started GET "/products" for 127.0.0.1 at 2014-02-07 21:01:20 +0100
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 41.4ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2014-02-07 21:01:32 +0100
+Processing by ProductsController#add_to_basket as HTML
+  Parameters: {"id"=>"2"}
+Redirected to http://localhost:3000/products
+Completed 302 Found in 5ms
+
+
+Started GET "/products" for 127.0.0.1 at 2014-02-07 21:01:32 +0100
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 8.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 9.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/custom_bootstrap.css?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-07 21:04:59 +0100
+
+
+Started GET "/products/2" for 127.0.0.1 at 2014-02-07 21:05:03 +0100
+Processing by ProductsController#add_to_basket as HTML
+  Parameters: {"id"=>"2"}
+Redirected to http://localhost:3000/products
+Completed 302 Found in 8ms
+
+
+Started GET "/products" for 127.0.0.1 at 2014-02-07 21:05:03 +0100
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 23.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 9.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/custom_bootstrap.css?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-07 21:05:07 +0100
+
+
+Started GET "/products/3" for 127.0.0.1 at 2014-02-07 21:05:08 +0100
+Processing by ProductsController#add_to_basket as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://localhost:3000/products
+Completed 302 Found in 2ms
+
+
+Started GET "/products" for 127.0.0.1 at 2014-02-07 21:05:08 +0100
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/application (61.4ms)
+Completed 200 OK in 70ms (Views: 69.6ms)

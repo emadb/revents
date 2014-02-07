@@ -6,7 +6,7 @@ describe AddToBasketHandler  do
   it 'should create a new basket item in the collection' do
     fake_repo = double('basket_repository')
     basket = BasketManagement::Basket.new(1)
-    article = BasketManagement::Article.new(1, 'test')
+    article = BasketManagement::Article.new(1, 12)
     fake_repo.stub(:get_basket => basket)
     fake_repo.stub(:get_article => article)
 

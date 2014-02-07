@@ -6,8 +6,9 @@ capybara-*.html
 .rvmrc
 /.bundle
 /vendor/bundle
-/log/*
-/tmp/*
+[web_app|server]/log/*
+[web_app|server]/tmp/**/*
+web_app/tmp/*
 /db/*.sqlite3
 /public/system/*
 /coverage/

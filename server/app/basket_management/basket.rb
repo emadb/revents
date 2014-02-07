@@ -31,9 +31,8 @@ module BasketManagement
 
     private
     def on_item_added item
-      p '#######'
+      p '#####'
       p item
-      p item[:item_code]
       get_item(item[:item_code]).try(:increase_quantity) || @items << BasketItem.new(item)      
     end
 
