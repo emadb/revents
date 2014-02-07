@@ -17,17 +17,7 @@ module BasketManagement
 
     def get_basket (basket_id)           
       events = @db['commits'].find({"aggregate_id" => basket_id.to_i}).to_a
-      # events = [
-      #   {:aggregate_id => 1, :name => :item_added, :args => 2  },
-      #   {:aggregate_id => 1, :name => :item_added, :args => 3  },
-      #   {:aggregate_id => 1, :name => :item_removed, :args => 2  },
-      #   {:aggregate_id => 1, :name => :item_added, :args => 4  },
-      # ]
-      puts '#get_basket'
-      puts basket_id
-      puts events
-      puts '---'
-      basket = Basket.new
+      basket = Basket.new(basket_id)
       basket.apply_events events
       basket
     end

@@ -4,18 +4,19 @@ module BasketManagement
 
     attr_reader :items
 
-    def initialize (price_calculator_service = PriceCalculatorService.new)
+    def initialize (id, price_calculator_service = PriceCalculatorService.new)
+      self.id = id
       @items = []
       @price_calculator_service = price_calculator_service
       @discount = 1
     end
 
     def add_item (item)
-      raise_event :item_added, item
+      raise_event :item_added, item.code
     end
 
     def remove_item (item)
-      raise_event :item_removed, item
+      raise_event :item_removed, item.code
     end
 
     def item_count
