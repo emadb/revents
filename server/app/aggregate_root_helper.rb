@@ -22,9 +22,10 @@ module AggregateRootHelper
 
   # TODO: error checking
   def commit
+    repository = CommitsRepository.new
     while event = uncommited_events.shift
       send_event event
-      # store event : {:aggregate_id => id, :event => event}
+      repository.store(id, event)
     end
   end
 
