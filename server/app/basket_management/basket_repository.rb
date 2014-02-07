@@ -7,16 +7,8 @@ module BasketManagement
       @db = mongo_client.db('revents')
     end
 
-    def save (basket)
-      # save the aggregate to the database
-    end
-
-    def get (basket_id)
-      #get the aggregate from database
-    end
-
     def get_basket (basket_id)           
-      events = @db['commits'].find({"aggregate_id" => basket_id.to_i}).to_a
+      events = @db['commits'].find({"aggregate_id" => basket_id.to_i}, :sort => 'timestamp').to_a
       basket = Basket.new(basket_id)
       basket.apply_events events
       basket

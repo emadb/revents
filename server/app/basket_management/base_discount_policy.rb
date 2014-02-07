@@ -1,3 +1,5 @@
+require_relative 'discount_factory'
+
 module BasketManagement
   class BaseDiscountPolicy
     def self.inherited(subclass)
