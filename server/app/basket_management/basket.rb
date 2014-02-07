@@ -1,5 +1,3 @@
-Dir["./lib/**/*.rb"].each {|file| require file }
-
 module BasketManagement
   class Basket
     include AggregateRootHelper
