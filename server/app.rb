@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'redis'
+require 'mongo'
 require 'json'
 require './app/aggregate_root_helper'
 require './app/core_ext'

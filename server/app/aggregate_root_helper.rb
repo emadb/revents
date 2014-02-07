@@ -15,7 +15,7 @@ module AggregateRootHelper
     @@subscribers[event] << {klass: self, method: method}
   end
 
-  def raise_event(event, *args)
+  def raise_event(event, *args)    
     uncommited_events << {name: event, args: args}
     send "on_#{event}", *args
   end
@@ -38,7 +38,7 @@ module AggregateRootHelper
 
   def apply_events events
     events.each do |e|
-      send "on_#{e[:name]}", e[:args]
+      send "on_#{e["name"]}", e["args"]
     end
   end
 end
