@@ -1,7 +1,7 @@
 def start
-	$redis = Redis.new
+	redis = Redis.new
 
-	$redis.subscribe('revents') do |on|
+	redis.subscribe('revents') do |on|
 	  on.message do |channel, msg|
 	    data = JSON.parse(msg)
 	    puts "received: #{channel} - #{data}"

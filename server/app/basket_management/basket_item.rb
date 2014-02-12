@@ -1,9 +1,10 @@
 module BasketManagement
   class BasketItem
-    attr_reader :item, :quantity
+    attr_reader :code, :price, :quantity
     
     def initialize (item, quantity = 1)
-      @item = item
+      @code = item[:item_code]
+      @price = item[:item_price]
       @quantity = quantity
     end
 
@@ -15,12 +16,12 @@ module BasketManagement
       @quantity = @quantity - 1
     end
 
-    def item_price
-      @item.price
+    def item_price 
+      @price
     end
 
-    def item_id
-      @item.id
+    def item_code
+      @code
     end
 
     def total_price
