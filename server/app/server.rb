@@ -1,4 +1,3 @@
-
 def start
 	puts 'configure consumers'
 
