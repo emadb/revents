@@ -2,11 +2,9 @@ class BasketViewDenormalizer
   include BaseDenormalizer
 
   def item_added(data)
-    p 'BasketViewDenormalizer'
-    p data
     db = Sequel.sqlite(AppSettings.sql_connection)
     article = db[:products_view].where(code: data[:item_code]).first
-    basket = db[:basket_view].where('basket_id = ? AND article_id = ?', data['basket_id'], article[:id]).first
+    basket = db[:basket_view].where('basket_id = ? AND article_id = ?', data[:basket_id], article[:id].to_i).first
     if basket.nil?
       db[:basket_view].insert(
         basket_id: data[:basket_id], 

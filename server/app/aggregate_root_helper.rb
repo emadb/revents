@@ -1,8 +1,6 @@
 module AggregateRootHelper
   include Wisper::Publisher
 
-  @@subscribers = Hash.new{|hash,key| hash[key]=[]}
-
   def self.included(klass)
     klass.extend AggregateRootHelper
   end

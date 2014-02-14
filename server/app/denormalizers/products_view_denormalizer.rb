@@ -5,8 +5,7 @@ class ProductsViewDenormalizer
       puts "ProductsViewDenormalizer received: #{data}"
       db = Sequel.sqlite(AppSettings.sql_connection)
       product = db[:products_view].where(code: data[:item_code]).first
-      p product
-      db[:products_view].where(code: data[:item_code]).update(quantity: (product[:quantity] - 1))
+      db[:products_view].where(code: data[:item_code]).update(quantity: (product[:quantity] - 1))	      
 	end
   
 end
