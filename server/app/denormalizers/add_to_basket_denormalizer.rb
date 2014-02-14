@@ -3,9 +3,9 @@ class AddToBasketDenormalizer
 	
 	def consume(data)		
     puts "AddToBasketDenormalizer received: #{data}"
-    # TODO: use parameters
 		db = Sequel.sqlite(AppSettings.sql_connection)
-		db.run "UPDATE products_view SET quantity = quantity-1 WHERE id = #{data["article_id"]}"
+		product = db[:products_view].where(:id => data["article_id"]).first
+		db[:products_view].where(:id => data["article_id"]).update(:quantity => (product[:quantity] - 1)) 			
 	end
 end
 
