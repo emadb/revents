@@ -11,8 +11,8 @@ module AggregateRootHelper
     @uncommited_events ||= []
   end
 
-  def subscribe_to(event, method)
-    @@subscribers[event] << {klass: self, method: method}
+  def subscribe_to(event, klass, method)
+    @@subscribers[event] << {klass: klass, method: method}
   end
 
   def raise_event(event, args)    
@@ -24,8 +24,8 @@ module AggregateRootHelper
   def commit
     repository = CommitsRepository.new
     while event = uncommited_events.shift
-      send_event event
       repository.store(id, event)
+      send_event event
     end
   end
 
