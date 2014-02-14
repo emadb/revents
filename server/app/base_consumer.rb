@@ -13,7 +13,7 @@ module BaseConsumer
 	end
 
 	def channel_name
-		self.class.name.sub(/Consumer|Denormalizer/, '')
+		self.class.name.sub(/Consumer/, '')
 	end
 
 	def listen

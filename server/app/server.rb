@@ -2,7 +2,7 @@ def start
 
 	BaseConsumer.subscribers.each do |subs|
 		p 'register: ' + subs.name
-		listener = subs.new(Redis.new)
+		listener = subs.new(Redis.new(:timeout => 0))
 		listener.listen
 	end
 
