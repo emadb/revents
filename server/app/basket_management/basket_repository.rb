@@ -22,6 +22,7 @@ module BasketManagement
     end
 
     def get_article(article_id)
+      #TODO implement ArticleAggregate
       Article.new('000', 10)
     end
   end
