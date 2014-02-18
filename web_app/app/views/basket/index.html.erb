@@ -1,0 +1,25 @@
+<h1>Basket</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Article</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% @basket.each do |p| %>
+        <tr>
+            <td><%= p[:article_description] %></td>
+            <td><%= p[:article_price] %></td>
+            <td><%= p[:quantity] %></td>
+        </tr>
+    <% end %>
+</table>
+
+<section class="well">
+<fieldset>
+    <legend>Total</legend>
+    <%= @total %>
+</fieldset>
+</section>

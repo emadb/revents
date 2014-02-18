@@ -18,3 +18,5 @@ rerun.txt
 pickle-email-*.html
 .project
 .DS_Store
+
+/web_app/log/development.log

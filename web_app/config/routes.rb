@@ -7,6 +7,7 @@ Revents::Application.routes.draw do
 
   get 'products' => 'products#index'
   get 'products/:id' => 'products#add_to_basket'
+  get 'basket' => 'basket#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
