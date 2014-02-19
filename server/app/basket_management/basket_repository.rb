@@ -11,6 +11,7 @@ module BasketManagement
       events = @db['commits'].find({"aggregate_id" => basket_id.to_i}, :sort => 'timestamp').to_a
       basket = Basket.new(basket_id)
             
+      # TODO: move out of here.
       events.each do |evt|
         evt['args'].keys.each do |key|
           evt['args'][(key.to_sym rescue key) || key] = evt['args'].delete(key)
@@ -22,7 +23,7 @@ module BasketManagement
     end
 
     def get_article(article_id)
-      #TODO implement ArticleAggregate
+      #TODO implement ArticleAggregate?
       Article.new('000', 10)
     end
   end
