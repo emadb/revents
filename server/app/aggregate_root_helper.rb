@@ -1,4 +1,6 @@
 module AggregateRootHelper
+  include Wisper::Publisher
+
   @@subscribers = Hash.new{|hash,key| hash[key]=[]}
 
   def self.included(klass)
@@ -11,10 +13,6 @@ module AggregateRootHelper
     @uncommited_events ||= []
   end
 
-  def subscribe_to(event, klass, method)
-    @@subscribers[event] << {klass: klass, method: method}
-  end
-
   def raise_event(event, args)    
     uncommited_events << {name: event, args: args}
     send "on_#{event}", args
@@ -24,20 +22,21 @@ module AggregateRootHelper
   def commit
     repository = CommitsRepository.new
     while event = uncommited_events.shift
+      p 'saving...'
       repository.store(id, event)
+      p 'saved...'
       send_event event
     end
   end
 
-  def send_event event
-    @@subscribers[event[:name]].each do |subscriber| 
-      ObjectSpace.each_object subscriber[:klass] do |instance|
-        instance.send subscriber[:method], event[:args]
-      end
-    end
+  def send_event(event)
+    p 'sending'
+    p event
+
+    publish(event[:name], event[:args])
   end
 
-  def apply_events events
+  def apply_events(events)
     events.each do |e|
       send "on_#{e["name"]}", e["args"]
     end

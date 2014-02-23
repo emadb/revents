@@ -1,11 +1,6 @@
 class BasketDenormalizer
-  include BaseListener
 
-  def channel_name
-    'AddToBasket'
-  end
-
-  def consume(data)
+  def item_added(data)
     db = Sequel.sqlite(AppSettings.sql_connection)
     article = db[:products_view].where(id: data['article_id']).first
     basket = db[:basket_view].where('basket_id = ? AND article_id = ?', data['basket_id'], data['article_id']).first

@@ -1,5 +1,6 @@
 require 'redis'
 require 'json'
+require 'wisper'
 require 'spec_helper'
 
 describe 'fire a message to the bus' do
