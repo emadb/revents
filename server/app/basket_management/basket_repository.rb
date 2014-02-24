@@ -22,9 +22,15 @@ module BasketManagement
       basket
     end
 
+    #TODO implement ArticleAggregate?
     def get_article(article_id)
-      #TODO implement ArticleAggregate?
-      Article.new('P1', 10)
+      articles = [
+        nil,
+        Article.new('P1', 10),
+        Article.new('P2', 500),
+        Article.new('P3', 200),
+      ]
+      articles[article_id]
     end
   end
 end

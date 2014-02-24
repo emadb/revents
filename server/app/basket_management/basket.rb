@@ -10,11 +10,11 @@ module BasketManagement
     end
 
     def add_item (item)
-      raise_event :item_added, {item_code: item.code, item_price: item.price}
+      raise_event :item_added, {basket_id: id, item_code: item.code, item_price: item.price}
     end
 
     def remove_item (item)
-      raise_event :item_removed, {item_code: item.code}
+      raise_event :item_removed, {basket_id: id, item_code: item.code}
     end
 
     def item_count
