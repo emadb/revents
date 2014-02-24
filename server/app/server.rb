@@ -1,13 +1,15 @@
 def start
-	puts 'configure consumers'
 
-  Wisper.add_listener(AddToBasketDenormalizer.new)
-  Wisper.add_listener(BasketDenormalizer.new)
-
-	BaseListener.subscribers.each do |subs|
+	BaseConsumer.subscribers.each do |subs|
 		p 'register: ' + subs.name
 		listener = subs.new(Redis.new)
 		listener.listen
+	end
+
+
+	BaseDenormalizer.subscribers.each do |deno|
+		p 'register denormalizer: ' + deno.name
+		Wisper.add_listener(deno.new)
 	end
 
 	puts 'waiting for incoming messages....'

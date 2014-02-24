@@ -1,4 +1,4 @@
-module BaseListener 
+module BaseConsumer 
 	@@subscribers = []
 	def self.subscribers
 		@@subscribers

@@ -22,18 +22,13 @@ module AggregateRootHelper
   def commit
     repository = CommitsRepository.new
     while event = uncommited_events.shift
-      p 'saving...'
       repository.store(id, event)
-      p 'saved...'
       send_event event
     end
   end
 
   def send_event(event)
-    p 'sending'
-    p event
-
-    publish(event[:name], event[:args])
+    broadcast(event[:name], event[:args])
   end
 
   def apply_events(events)

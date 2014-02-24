@@ -10,6 +10,7 @@ $:.unshift File.expand_path('../', __FILE__)
 require 'wisper'
 
 Dir['./app/*.rb'].each { |f| require f }
+Dir['./app/**/*.rb'].each { |f| require f }
 Dir['./app/basket_management/**/*.rb'].each { |f| require f }
 
 RSpec.configure do |config|

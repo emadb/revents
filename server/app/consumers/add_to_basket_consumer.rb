@@ -1,5 +1,5 @@
 class AddToBasketConsumer
-	include BaseListener
+	include BaseConsumer
 	
 	def consume(data)
 		repository = BasketManagement::BasketRepository.new
