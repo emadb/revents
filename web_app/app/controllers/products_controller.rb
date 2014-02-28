@@ -6,9 +6,7 @@ class ProductsController < ApplicationController
 	end
 
 	def add_to_basket
-    # TODO: enrich the command with: article description and price
-    # TODO: who is in charge of this?
-		send_command AddToBasketCommand.new({"basket_id" => 1, "article_id" => params[:id].to_i})
+   	send_command AddToBasketCommand.new({"basket_id" => 1, "article_id" => params[:id].to_i})
 		redirect_to products_url
 	end
 end

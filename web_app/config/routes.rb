@@ -5,6 +5,7 @@ Revents::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
+  root to: "products#index"
   get 'products' => 'products#index'
   get 'products/:id' => 'products#add_to_basket'
   get 'basket' => 'basket#index'
