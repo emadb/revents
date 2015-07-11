@@ -19,5 +19,4 @@ Dir['./app/basket_management/**/*.rb'].each { |f| require f }
 
 require './app/server'
 
-
 start
