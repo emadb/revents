@@ -4,17 +4,17 @@ module BasketManagement
 
     attr_reader :items
 
-    def initialize (id)
+    def initialize(id)
       self.id = id
       @items = []
     end
 
-    def add_item (item)
-      raise_event :item_added, {basket_id: id, item_code: item.code, item_price: item.price}
+    def add_item(item)
+      raise_event :item_added, basket_id: id, item_code: item.code, item_price: item.price
     end
 
-    def remove_item (item)
-      raise_event :item_removed, {basket_id: id, item_code: item.code}
+    def remove_item(item)
+      raise_event :item_removed, basket_id: id, item_code: item.code
     end
 
     def item_count
@@ -30,11 +30,12 @@ module BasketManagement
     end
 
     private
-    def on_item_added item
-      get_item(item[:item_code]).try(:increase_quantity) || @items << BasketItem.new(item)      
+
+    def on_item_added(item)
+      get_item(item[:item_code]).try(:increase_quantity) || @items << BasketItem.new(item)
     end
 
-    def on_item_removed item
+    def on_item_removed(item)
       selected_item = get_item(item[:item_code])
       selected_item.decrease_quantity
       if selected_item.quantity == 0
@@ -42,8 +43,8 @@ module BasketManagement
       end
     end
 
-    def get_item (item_code)
-      @items.select{|i| i.item_code == item_code}.try :first
+    def get_item(item_code)
+      @items.select { |i| i.item_code == item_code }.try :first
     end
   end
 end
