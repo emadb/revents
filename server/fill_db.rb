@@ -18,5 +18,3 @@ doc = {"aggregate_id" => 1, "timestamp" => timestamp, "name" => "item_removed", 
 db["commits"].insert(doc)
 doc = {"aggregate_id" => 1, "timestamp" => timestamp, "name" => "item_added", "args" => {:item_code => '003', :item_price => 15}}
 db["commits"].insert(doc)
-
-

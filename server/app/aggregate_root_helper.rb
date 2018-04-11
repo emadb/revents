@@ -4,15 +4,15 @@ module AggregateRootHelper
   def self.included(klass)
     klass.extend AggregateRootHelper
   end
-  
+
   attr_accessor :id
 
   def uncommited_events
     @uncommited_events ||= []
   end
 
-  def raise_event(event, args)    
-    uncommited_events << {name: event, args: args}
+  def raise_event(event, args)
+    uncommited_events << { name: event, args: args }
     send "on_#{event}", args
   end
 

@@ -9,12 +9,13 @@
 		</tr>
 	</thead>
 	<tbody>
-	<% @products.each do |p| %>
+		<% @products.each do |p| %>
 		<tr>
 			<td><%= p[:description] %></td>
 			<td><%= p[:price] %></td>
 			<td><%= p[:quantity] %></td>
-			<td><a class="btn btn-default" href="/products/<%= p[:id] %>">Add to basket</a></td>		
+			<td><a class="btn btn-default" href="/products/<%= p[:id] %>">Add to basket</a></td>
 		</tr>
-	<% end %>
+		<% end %>
+	</tbody>
 </table>
